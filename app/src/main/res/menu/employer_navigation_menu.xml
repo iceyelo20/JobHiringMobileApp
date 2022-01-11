@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/employer_nav_post"
+        android:title="Add New Post"
+        android:icon="@drawable/add_post"/>
+    <item
+        android:id="@+id/employer_nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"/>
+    <item
+        android:id="@+id/employer_nav_friends"
+        android:title="Users"
+        android:icon="@drawable/friends"/>
+    <item
+        android:id="@+id/employer_nav_job_management"
+        android:title="Job Management"
+        android:icon="@drawable/find_people"/>
+    <item
+        android:id="@+id/employer_nav_messages"
+        android:title="Messages"
+        android:icon="@drawable/messages"/>
+    <item
+        android:id="@+id/employer_nav_group_messages"
+        android:title="Group Chat"
+        android:icon="@drawable/messages"/>
+    <item
+        android:id="@+id/employer_nav_settings"
+        android:title="Change Password"
+        android:icon="@drawable/settings"/>
+    <item
+        android:id="@+id/employer_nav_logout"
+        android:title="Logout"
+        android:icon="@drawable/logout"/>
+</menu>

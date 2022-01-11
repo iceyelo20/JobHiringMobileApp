@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobManagementActivity">
+
+    <include
+        android:id="@+id/job_management_page_toolbar"
+        layout="@layout/app_bar_layout">
+
+    </include>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/job_management_page_toolbar"
+        android:layout_marginTop="30sp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardElevation="8dp">
+
+        <Button
+            android:id="@+id/add_new_job"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/button"
+            android:drawableTop="@drawable/ic_add_job"
+            android:minHeight="52dp"
+            android:padding="15dp"
+            android:text="Add New Job"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardLayout1"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="20dp"
+        app:cardElevation="8dp">
+
+        <Button
+            android:id="@+id/posted_jobs"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/button"
+            android:minHeight="52dp"
+            android:padding="15dp"
+            android:drawableTop="@drawable/ic_posted"
+            android:text="Posted jobs"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardLayout"
+        app:cardCornerRadius="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        app:cardElevation="8dp">
+
+        <Button
+            android:id="@+id/successful_hired_jobs"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/button"
+            android:minHeight="52dip"
+            android:padding="15dp"
+            android:drawableTop="@drawable/ic_done_job"
+            android:text="Successful Hired Jobs"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

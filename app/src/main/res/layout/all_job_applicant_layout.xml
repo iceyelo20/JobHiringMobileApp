@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/top_bottom_border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/job_applicant_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/job_applicant_profile"
+            android:layout_alignParentEnd="true"
+            android:text="Date and Time"/>
+
+        <TextView
+            android:id="@+id/tvApplicantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_below="@+id/tvDateTime"
+            android:layout_toEndOf="@+id/job_applicant_profile"
+            android:text="Name"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvApplicantUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/username"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/job_applicant_profile"
+            android:layout_below="@+id/tvApplicantName"
+            android:text="Username"/>
+
+        <TextView
+            android:id="@+id/tvJobStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvApplicantUsername"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:text="Status"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

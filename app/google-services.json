@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "624237907302",
+    "project_id": "job-hiring-mobile-app-e1345",
+    "storage_bucket": "job-hiring-mobile-app-e1345.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624237907302:android:fcb023518697abd175cca7",
+        "android_client_info": {
+          "package_name": "com.example.jobhiringmobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624237907302-nrb9hi5kod1753lr8rcd5san4t24484q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9b1Zu4DjCEqCC0kLNiBtI3VmKNpqoqYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624237907302-nrb9hi5kod1753lr8rcd5san4t24484q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

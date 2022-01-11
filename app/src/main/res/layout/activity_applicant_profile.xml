@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorProfile"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+    tools:context=".ApplicantProfileActivity">
+
+    <include android:id="@+id/applicant_profile_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/applicant_profile_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/setup_inputs">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/applicant_profile_profile_image"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                app:civ_border_color="@color/browser_actions_divider_color"
+                app:civ_border_width="4dp"
+                android:src="@drawable/profile" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/applicant_profile_profile_image"
+                android:enabled="false"
+                android:hint="Profile Status"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <EditText
+                    android:id="@+id/applicant_profile_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/applicant_profile_profile_image"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:padding="30dp"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textInputLayoutStatus"
+                android:enabled="false"
+                android:hint="Username"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <EditText
+                    android:id="@+id/applicant_profile_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:padding="12dp"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutProfileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textInputLayoutUserName"
+                android:enabled="false"
+                android:hint="Full Name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <EditText
+                    android:id="@+id/applicant_profile_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:padding="12dp"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textInputLayoutProfileName"
+                android:enabled="false"
+                android:hint="Date of Birth"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <EditText
+                    android:id="@+id/setupDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:ems="1"
+                    android:enabled="false"
+                    android:layout_weight="1"
+                    android:padding="16dp"
+                    android:inputType="textImeMultiLine"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textInputLayoutDOB"
+                android:enabled="false"
+                android:hint="@string/gender"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_gender_txt"
+                    android:inputType="none"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutBarangay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textInputLayoutGender"
+                android:hint="@string/select"
+                android:enabled="false"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+                <AutoCompleteTextView
+                    android:inputType="none"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:id="@+id/auto_complete_txt"
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/update_account_applicant_profile_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textInputLayoutBarangay"
+                android:layout_margin="10dp"
+                android:background="@drawable/button"
+                android:text="Edit Account Details"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/my_applied_job_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Applied Jobs"
+                android:layout_below="@id/update_account_applicant_profile_buttons"
+                android:background="@drawable/button"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+<!--            <Button-->
+<!--                android:id="@+id/my_friends_button"-->
+<!--                android:layout_width="198dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:text="Friends"-->
+<!--                android:layout_below="@id/update_account_applicant_profile_buttons"-->
+<!--                android:background="@drawable/button"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textStyle="bold"/>-->
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

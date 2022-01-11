@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:fitsSystemWindows="true"
+    tools:context=".CreateGroupActivity">
+
+    <include
+        android:id="@+id/create_group_page_toolbar"
+        layout="@layout/app_bar_layout">
+
+    </include>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/group_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/create_group_page_toolbar"
+        android:src="@drawable/group_icon"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="4dp"/>
+
+    <EditText
+        android:id="@+id/group_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inputs"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/group_icon"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:hint="Group Name"/>
+
+    <EditText
+        android:id="@+id/group_description"
+        android:minHeight="100dp"
+        android:gravity="top"
+        android:inputType="textMultiLine|textCapSentences"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/inputs"
+        android:layout_below="@id/group_title"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:hint="Group Description"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_group_button"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_done_icon"
+        app:backgroundTint="@color/white"/>
+
+
+</RelativeLayout>

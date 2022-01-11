@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinishedHiredApplicantActivity">
+
+    <include
+        android:id="@+id/finished_hired_page_toolbar"
+        layout="@layout/app_bar_layout">
+
+    </include>
+
+    <ImageButton
+        android:id="@+id/communicate_video_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_video"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentEnd="true"/>
+    <ImageButton
+        android:id="@+id/communicate_audio_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/ic_audio"
+        android:layout_toStartOf="@id/communicate_video_call"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_finished_applicant_list"
+        android:layout_below="@+id/finished_hired_page_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

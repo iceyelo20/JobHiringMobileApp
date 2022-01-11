@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApplicantViewJobActivity">
+
+    <include
+        android:id="@+id/applicant_view_job_page_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/applicant_view_job_page_toolbar"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/inputs"
+            android:layout_below="@+id/add_job_page_toolbar">
+
+            <TextView
+                android:id="@+id/textJobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Job"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/job_title"
+                android:hint="Job Title"
+                android:layout_below="@+id/textJobTitle"
+                android:inputType="textImeMultiLine|textCapWords"
+                android:layout_width="match_parent"
+                android:textSize="22sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textJobSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Job Summary:"
+                android:textStyle="bold"
+                android:layout_below="@id/job_title"
+                android:layout_marginLeft="10dp"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/tv_job_position_to_fill"
+                android:text="Position to Fill"
+                android:layout_below="@+id/textJobSummary"
+                android:layout_marginTop="5dp"
+                android:layout_width="125dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvPositionToFillDivider"
+                android:text=": "
+                android:layout_below="@+id/textJobSummary"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/tv_job_position_to_fill"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/job_position_to_fill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textJobSummary"
+                android:layout_toEndOf="@+id/tvPositionToFillDivider"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:hint="Position to fill"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_job_salary"
+                android:text="Salary"
+                android:layout_below="@+id/job_position_to_fill"
+                android:layout_marginTop="5dp"
+                android:layout_width="125dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvSalaryDivider"
+                android:text=": "
+                android:layout_below="@+id/tvPositionToFillDivider"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/tv_job_salary"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/job_salary"
+                android:hint="Salary"
+                android:layout_below="@+id/job_position_to_fill"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:layout_toEndOf="@+id/tvSalaryDivider"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_work_hours_per_day"
+                android:text="Work HPD: "
+                android:layout_below="@+id/job_salary"
+                android:layout_marginTop="5dp"
+                android:layout_width="125dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvWHPDDivider"
+                android:text=": "
+                android:layout_below="@+id/tvSalaryDivider"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/tv_work_hours_per_day"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/work_hours_per_day"
+                android:hint="Work hours per day"
+                android:layout_below="@+id/job_salary"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/tvStatusDivider"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_job_status"
+                android:text="Job Status: "
+                android:layout_below="@+id/work_hours_per_day"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:inputType="textImeMultiLine|textCapSentences"
+                android:layout_width="125dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvStatusDivider"
+                android:text=": "
+                android:layout_below="@+id/tvWHPDDivider"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/tv_job_status"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/job_status"
+                android:hint="Job status"
+                android:layout_below="@+id/work_hours_per_day"
+                android:layout_toEndOf="@+id/tvStatusDivider"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_work_place"
+                android:text="Workplace: "
+                android:layout_below="@+id/job_status"
+                android:layout_width="125dp"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvWorkPlaceDivider"
+                android:text=": "
+                android:layout_below="@+id/tvStatusDivider"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/tv_work_place"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/work_place"
+                android:hint="Workplace"
+                android:layout_below="@+id/job_status"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/tvWorkPlaceDivider"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textJobDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Job Detail:"
+                android:textStyle="bold"
+                android:layout_below="@id/work_place"
+                android:layout_marginLeft="10dp"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/job_detail"
+                android:hint="Job detail"
+                android:layout_below="@+id/textJobDetail"
+                android:layout_width="match_parent"
+                android:inputType="textMultiLine|textCapSentences"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textJobRequirement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Job Requirement:"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_below="@id/job_detail"
+                android:layout_marginLeft="10dp"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/job_requirement"
+                android:hint="Job requirement"
+                android:layout_below="@+id/textJobRequirement"
+                android:layout_width="match_parent"
+                android:inputType="textMultiLine|textCapSentences"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/applicant_apply_job"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/job_requirement"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button"
+                android:minHeight="52dp"
+                android:padding="15dp"
+                android:text="Apply"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

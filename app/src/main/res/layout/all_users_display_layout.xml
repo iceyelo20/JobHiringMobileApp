@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:layout_marginTop="5dp"
+    android:id="@+id/userContainer"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorProfile">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/all_users_profile_image"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/profile" />
+
+       <TextView
+           android:id="@+id/all_users_full_name"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_toStartOf="@+id/all_user_online_icon"
+           android:layout_toEndOf="@+id/all_users_profile_image"
+           android:text="Full name"
+           android:inputType="textCapWords"
+           android:textStyle="bold"
+           android:textAlignment="textStart"
+           android:textColor="@android:color/background_light"
+           android:textSize="18sp" />
+
+       <ImageView
+           android:id="@+id/all_user_online_icon"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:layout_alignParentEnd="true"
+           android:src="@drawable/online"
+           android:layout_marginRight="10dp"
+           android:layout_marginTop="3dp"
+           android:visibility="invisible"/>
+
+
+       <TextView
+           android:id="@+id/all_users_status"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/all_users_full_name"
+           android:layout_toEndOf="@+id/all_users_profile_image"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="5dp"
+           android:layout_marginTop="5dp"
+           android:textAlignment="textStart"
+           android:textColor="@android:color/background_light"
+           android:textSize="16sp" />
+
+
+</RelativeLayout>

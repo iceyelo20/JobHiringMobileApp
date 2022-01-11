@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/applicant_nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"/>
+    <item
+        android:id="@+id/applicant_nav_employer"
+        android:title="Employer"
+        android:icon="@drawable/friends"/>
+    <item
+        android:id="@+id/applicant_nav_find_job"
+        android:title="Jobs"
+        android:icon="@drawable/find_people"/>
+    <item
+        android:id="@+id/applicant_nav_messages"
+        android:title="Messages"
+        android:icon="@drawable/messages"/>
+    <item
+        android:id="@+id/applicant_nav_group_messages"
+        android:title="Group Chat"
+        android:icon="@drawable/messages"/>
+    <item
+        android:id="@+id/applicant_nav_settings"
+        android:title="Change Password"
+        android:icon="@drawable/settings"/>
+    <item
+        android:id="@+id/applicant_nav_logout"
+        android:title="Logout"
+        android:icon="@drawable/logout"/>
+</menu>

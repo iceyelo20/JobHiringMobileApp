@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorProfile"
+    tools:context=".ClickPostActivity">
+
+    <include
+        android:id="@+id/click_post_page_toolbar"
+        layout="@layout/app_bar_layout"/>
+
+    <ScrollView
+        android:layout_below="@id/click_post_page_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/inputs">
+
+            <EditText
+                android:id="@+id/update_post_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:background="@drawable/post_input"
+                android:text="Write something..."
+                android:textCursorDrawable="@color/black" />
+
+            <com.example.jobhiringmobileapp.ResizableImageView
+                android:id="@+id/update_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/update_post_description"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/post_input"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/select_image" />
+
+        </RelativeLayout>
+
+            <Button
+                android:id="@+id/edit_post_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button"
+                android:text="Update Post"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/delete_post_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_post_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/delete_button"
+                android:text="Delete Post"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

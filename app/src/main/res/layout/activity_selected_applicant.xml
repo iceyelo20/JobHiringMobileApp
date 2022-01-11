@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectedApplicantActivity">
+
+    <include
+        android:id="@+id/selected_applicant_page_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/selected_applicant_page_toolbar"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/inputs"
+            android:layout_below="@+id/add_job_page_toolbar">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/applicantProfileImage"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/profile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
+
+            <TextView
+                android:id="@+id/tvApplicant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Applicant"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/jobApplicantName"
+                android:hint="Name"
+                android:layout_below="@+id/tvApplicant"
+                android:layout_toStartOf="@+id/applicantProfileImage"
+                android:inputType="textImeMultiLine|textCapWords"
+                android:layout_width="match_parent"
+                android:textSize="22sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textApplicantDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Applicant Details"
+                android:textStyle="bold"
+                android:layout_below="@id/jobApplicantName"
+                android:layout_marginLeft="10dp"
+                android:textSize="24sp"/>
+
+            <Button
+                android:id="@+id/viewProfile"
+                android:text="View Profile"
+                android:layout_below="@+id/applicantProfileImage"
+                android:layout_alignParentEnd="true"
+                android:layout_width="110dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/tvDateOFBirth"
+                android:text="Date of Birth"
+                android:layout_below="@+id/textApplicantDetail"
+                android:layout_marginTop="5dp"
+                android:layout_width="120dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvDateOFBirthDivider"
+                android:text=": "
+                android:layout_below="@+id/textApplicantDetail"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/tvDateOFBirth"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/dateOfBirth"
+                android:hint="MM/DD/YYYY"
+                android:layout_below="@+id/textApplicantDetail"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/tvDateOFBirthDivider"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvBarangay"
+                android:text="Barangay"
+                android:layout_below="@+id/tvDateOFBirth"
+                android:layout_marginTop="5dp"
+                android:layout_width="120dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvBarangayDivider"
+                android:text=": "
+                android:layout_below="@+id/tvDateOFBirth"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/tvBarangay"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/barangay"
+                android:hint="Barangay"
+                android:layout_below="@+id/dateOfBirth"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:layout_toEndOf="@+id/tvBarangayDivider"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvGender"
+                android:text="Gender"
+                android:layout_below="@+id/tvBarangay"
+                android:layout_marginTop="5dp"
+                android:layout_width="120dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvGenderDivider"
+                android:text=": "
+                android:layout_below="@+id/tvBarangay"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/tvGender"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:hint="Gender"
+                android:layout_below="@+id/barangay"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/tvGenderDivider"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Others"
+                android:textStyle="bold"
+                android:layout_below="@id/tvGender"
+                android:layout_marginLeft="10dp"
+                android:textSize="24sp"/>
+
+            <Button
+                android:id="@+id/others"
+                android:text="Resume"
+                android:layout_below="@+id/textOthers"
+                android:layout_width="match_parent"
+                android:inputType="textMultiLine|textCapSentences"
+                android:textSize="20sp"
+                android:background="@drawable/disable_button"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/approveApplicant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/others"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button"
+                android:minHeight="52dp"
+                android:padding="15dp"
+                android:text="Approve"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/disapproveApplicant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/approveApplicant"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/delete_button"
+                android:minHeight="52dp"
+                android:padding="15dp"
+                android:text="Disapprove"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

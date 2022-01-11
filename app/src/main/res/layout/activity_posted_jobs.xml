@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostedJobsActivity">
+
+    <include
+        android:id="@+id/posted_jobs_page_toolbar"
+        layout="@layout/app_bar_layout">
+
+    </include>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/all_jobs_post_list"
+            android:layout_below="@+id/posted_jobs_page_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</RelativeLayout>
